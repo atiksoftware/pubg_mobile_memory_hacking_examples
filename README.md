@@ -4,11 +4,12 @@
 [![GitHub stars](https://img.shields.io/github/stars/atiksoftware/pubg_mobile_memory_hacking_examples?color=brightgreen)]()
 [![GitHub contributors](https://img.shields.io/github/contributors/atiksoftware/pubg_mobile_memory_hacking_examples?color=brightgreen)]()
 [![GitHub issues](https://img.shields.io/github/issues/atiksoftware/pubg_mobile_memory_hacking_examples?color=blue)]()
-[![GitHub license](https://img.shields.io/github/license/atiksoftware/pubg_mobile_memory_hacking_examples)]()
-[![GitHub commit](https://img.shields.io/github/last-commit/atiksoftware/pubg_mobile_memory_hacking_examples/develop?color=blueviolet)]()
 
 
-Pubg Mobile Emulator Gameloop Memory Hacking C++ code examples. Ex: Name, Coord, Bones, Weapons, Items, Box, Drop etc.
+[https://discord.gg/r29z6XW](https://discord.gg/r29z6XW)
+
+Pubg Mobile Emulator Gameloop Memory Hacking C++ code examples. Ex: Name, Coord, Bones, Weapons, Items, Box, Drop etc.  
+
 [![PUBG ESP EXAMPLE SCREENSHOT](https://raw.githubusercontent.com/atiksoftware/pubg_mobile_memory_hacking_examples/master/example_screen.jpg)](https://www.youtube.com/watch?v=4KoCf4DoBKQ)
 
 I just created this quickly. Then text not pretty good.
