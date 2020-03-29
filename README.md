@@ -21,11 +21,15 @@ I used C++, and used SFML library
 I have find patterns and ofsets about pubg gameloop
 
 # My Sources ? 
++ ESP source for PUBGM v0.17.0 on Gameloop  
+Author : xiderowg
+Link : https://www.unknowncheats.me/forum/pubg-mobile/379241-esp-source-pubgm-v0-17-0-gameloop.html  
 i start with xiderowg's source  
-ESP source for PUBGM v0.17.0 on Gameloop  
-from : https://www.unknowncheats.me/forum/pubg-mobile/379241-esp-source-pubgm-v0-17-0-gameloop.html  
 it was C#.   
 i created c++ project and used his pattern and offsets
++ BypaPH - Process Hacker's bypass (read/write any process virtual memory & kernel mem)
+Author : harakirinox
+Link : [https://www.unknowncheats.me/forum/pubg-mobile/379241-esp-source-pubgm-v0-17-0-gameloop.html  ](https://www.unknowncheats.me/forum/anti-cheat-bypass/312791-bypaph-process-hackers-bypass-read-write-process-virtual-memory-kernel-mem.html#post2316212)
 
 # Whats my news ?
 + Vehicle HP
