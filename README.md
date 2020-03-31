@@ -11,7 +11,7 @@
 Pubg Mobile Emulator Gameloop Memory Hacking C++ code examples. Ex: Name, Coord, Bones, Weapons, Items, Box, Drop etc.  
 
 **[Youtube Video](https://www.youtube.com/watch?v=4KoCf4DoBKQ)**
-[![PUBG ESP EXAMPLE SCREENSHOT](https://raw.githubusercontent.com/atiksoftware/pubg_mobile_memory_hacking_examples/master/example_screen.jpg)](https://www.youtube.com/watch?v=4KoCf4DoBKQ)
+[![PUBG ESP EXAMPLE SCREENSHOT](https://raw.githubusercontent.com/atiksoftware/pubg_mobile_memory_hacking_examples/master/screens/example_screen.jpg)](https://www.youtube.com/watch?v=4KoCf4DoBKQ)
 
 I just created this quickly. Then text not pretty good.  
 
@@ -45,9 +45,38 @@ Link : [https://www.unknowncheats.me/forum/anti-cheat-bypass/312791-bypaph-proce
 You can see my codes and offsets
 [ESP Source File ](https://github.com/atiksoftware/pubg_mobile_memory_hacking_examples/blob/master/Esp.cpp)
  
+---  
+## Player Details
+![](https://raw.githubusercontent.com/atiksoftware/pubg_mobile_memory_hacking_examples/master/screens/example_player_reclass.jpg)
+ ```c++
+Entities[i].setHealthEnergy(
+	get<float>(Entities[i].entityAddv + 0x77C),  // maxHealth
+	get<float>(Entities[i].entityAddv + 0x778),  // curHealth
+	get<float>(Entities[i].entityAddv + 0x1408), // maxEnergy
+	get<float>(Entities[i].entityAddv + 0x140C)  // curEnergy
+); 
+// Player Weapon
+bool foundedActiveWeapon = false;
+DWORD weaponsCapsule = get<DWORD>(Entities[i].entityAddv + 0x12C);
+for(int w = 0; w < 16; w += 4){
+	DWORD weaponBase = get<DWORD>(weaponsCapsule + w);
+	DWORD weaponAmmoBase = get<DWORD>(weaponBase + 0x54);
+	//          handleA            == 54234 &&          handleB            == 2
+	if(get<int>(weaponBase + 0xD8) == 54234 && get<int>(weaponBase + 0xDC) == 2){
+		Entities[i].setActiveWeapon(
+			get<int>(get<DWORD>(weaponBase + 0x4BC) + 0xC0),     // weaponId
+			get<int>(weaponAmmoBase + 0x7D4), // maxAmmo
+			get<int>(weaponAmmoBase + 0x7D0)  // curAmmo
+		);
+		foundedActiveWeapon = true;
+		break;
+	}
+}
+ ```
 
+---  
 
-# Item Details
+## Item Details
 
 Item Types  
 1 : Loot - Item  
