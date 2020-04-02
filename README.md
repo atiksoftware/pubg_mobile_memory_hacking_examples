@@ -46,6 +46,12 @@ You can see my codes and offsets
 [ESP Source File ](https://github.com/atiksoftware/pubg_mobile_memory_hacking_examples/blob/master/Esp.cpp)
   
 ---  
+## Whats defferent between Gameloop/Smartgaga and LDPlayer/Memu
+As **xiderowg**'s says on https://www.unknowncheats.me/forum/pubg-mobile/379241-esp-source-pubgm-v0-17-0-gameloop.html
+
+`Gameloop is based on AOW/QEMU Engine, while LDPlayer is using VirtualBox, these offsets and pattern may not be applicable to LDPlayer.`
+  
+---  
 ## Pubg Mobile GameLoop ReClass
 ![](https://raw.githubusercontent.com/atiksoftware/pubg_mobile_memory_hacking_examples/master/screens/reclass_pubg_mobile.png)
 ---  
