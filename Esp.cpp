@@ -1,5 +1,16 @@
 #include "includes.h" 
 
+
+DWORD controllerOffset = 96;
+DWORD posOffset = 336;
+DWORD healthOffset = 1912;
+DWORD nameOffset = 1512;
+DWORD teamIDOffset = 1552;
+DWORD statusOffset = 868;
+DWORD poseOffset = 288;
+
+
+
 Esp* g_pEsp = new Esp();
 
 Esp::Esp(){}
