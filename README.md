@@ -23,6 +23,9 @@ I just created this quickly. Then text not pretty good.
 [![#3 - Create a Overlay Window - Import SFML Library | Pubg Mobile Hacking Tutorial](https://i3.ytimg.com/vi/mukNNm5MxJE/default.jpg)](https://www.youtube.com/watch?v=mukNNm5MxJE)
 [![#4 - Process Manager - Find Aow Process ID | Pubg Mobile Hacking Tutorial](https://i3.ytimg.com/vi/nVuDz1hbYEs/default.jpg)](https://www.youtube.com/watch?v=nVuDz1hbYEs)
 [![#5 - How Can I Change Driver Name - kprocesshacker.sys | Pubg Mobile Hacking Tutorial](https://i3.ytimg.com/vi/uJiurAlhsWw/default.jpg)](https://www.youtube.com/watch?v=uJiurAlhsWw)
+[![#6 - Colorful Terminal Output | Pubg Mobile Hacking Tutorial](https://i3.ytimg.com/vi/UI6xyrmGtQ4/default.jpg)](https://www.youtube.com/watch?v=UI6xyrmGtQ4)
+[![#7 - Memory Manager - Connect to Driver | Pubg Mobile Hacking Tutorial](https://i3.ytimg.com/vi/V3bd7XEfW68/default.jpg)](https://www.youtube.com/watch?v=V3bd7XEfW68)
+[![#8 - ESP - Find Base Points | Pubg Mobile Hacking Tutorial](https://i3.ytimg.com/vi/TpCXqkRH08A/default.jpg)](https://www.youtube.com/watch?v=TpCXqkRH08A)
 
 ## Just Examples
 Hi dear visitor. Its not hacking app or shared app. It just example codes pool. I will push here simples code about what i know and what i experied on pubg memory hacking. My purpose is find again if i forget or if some one need it, he can find it.

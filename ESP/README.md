@@ -37,3 +37,15 @@ I will use VStudio 2017. Because i will use SFML libray for draw esp. And SFML l
 
 **[#4 - Process Manager - Find Aow Process ID | Pubg Mobile Hacking Tutorial](https://www.youtube.com/watch?v=nVuDz1hbYEs)**
 [![#4 - Process Manager - Find Aow Process ID | Pubg Mobile Hacking Tutorial](https://i3.ytimg.com/vi/nVuDz1hbYEs/maxresdefault.jpg)](https://www.youtube.com/watch?v=nVuDz1hbYEs)
+
+**[#5 - How Can I Change Driver Name - kprocesshacker.sys | Pubg Mobile Hacking Tutorial](https://www.youtube.com/watch?v=uJiurAlhsWw)**
+[![#5 - How Can I Change Driver Name - kprocesshacker.sys | Pubg Mobile Hacking Tutorial](https://i3.ytimg.com/vi/uJiurAlhsWw/maxresdefault.jpg)](https://www.youtube.com/watch?v=uJiurAlhsWw)
+
+**[#6 - Colorful Terminal Output | Pubg Mobile Hacking Tutorial](https://www.youtube.com/watch?v=UI6xyrmGtQ4)**
+[![#6 - Colorful Terminal Output | Pubg Mobile Hacking Tutorial](https://i3.ytimg.com/vi/UI6xyrmGtQ4/maxresdefault.jpg)](https://www.youtube.com/watch?v=UI6xyrmGtQ4)
+
+**[#7 - Memory Manager - Connect to Driver | Pubg Mobile Hacking Tutorial](https://www.youtube.com/watch?v=V3bd7XEfW68)**
+[![#7 - Memory Manager - Connect to Driver | Pubg Mobile Hacking Tutorial](https://i3.ytimg.com/vi/V3bd7XEfW68/maxresdefault.jpg)](https://www.youtube.com/watch?v=V3bd7XEfW68)
+
+**[#8 - ESP - Find Base Points | Pubg Mobile Hacking Tutorial](https://www.youtube.com/watch?v=TpCXqkRH08A)**
+[![#8 - ESP - Find Base Points | Pubg Mobile Hacking Tutorial](https://i3.ytimg.com/vi/TpCXqkRH08A/maxresdefault.jpg)](https://www.youtube.com/watch?v=TpCXqkRH08A)

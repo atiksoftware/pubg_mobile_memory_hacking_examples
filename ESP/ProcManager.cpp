@@ -16,7 +16,7 @@ int ProcManager::getAowProcID(){
 	Process32First(hSnap, &pe);
 	while(Process32Next(hSnap, &pe)){
 		if(_tcsicmp(pe.szExeFile, _T("aow_exe.exe")) == 0){
-			if(pe.cntThreads > threadCount){
+			if((int)pe.cntThreads > threadCount){
 				threadCount = pe.cntThreads;
 				pid = pe.th32ProcessID;
 			}

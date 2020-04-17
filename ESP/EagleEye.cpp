@@ -6,8 +6,15 @@
 int main()
 {
 
-	int gamePid = ProcManager::getAowProcID();
 
+
+	int gamePid = ProcManager::getAowProcID();
+	 
+
+	g_pMemoryManager->init(gamePid, true);
+
+
+	g_pEsp->init();
 
 
 
