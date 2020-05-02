@@ -71,32 +71,104 @@ As **xiderowg**'s says on https://www.unknowncheats.me/forum/pubg-mobile/379241-
 ---  
 ## Player Details
 ![](https://raw.githubusercontent.com/atiksoftware/pubg_mobile_memory_hacking_examples/master/screens/example_player_reclass.jpg)
+---  
+## Player Details
  ```c++
-Entities[i].setHealthEnergy(
-	get<float>(Entities[i].entityAddv + 0x77C),  // maxHealth
-	get<float>(Entities[i].entityAddv + 0x778),  // curHealth
-	get<float>(Entities[i].entityAddv + 0x1408), // maxEnergy
-	get<float>(Entities[i].entityAddv + 0x140C)  // curEnergy
-); 
-// Player Weapon
-bool foundedActiveWeapon = false;
-DWORD weaponsCapsule = get<DWORD>(Entities[i].entityAddv + 0x12C);
-for(int w = 0; w < 16; w += 4){
-	DWORD weaponBase = get<DWORD>(weaponsCapsule + w);
-	DWORD weaponAmmoBase = get<DWORD>(weaponBase + 0x54);
-	//          handleA            == 54234 &&          handleB            == 2
-	if(get<int>(weaponBase + 0xD8) == 54234 && get<int>(weaponBase + 0xDC) == 2){
-		Entities[i].setActiveWeapon(
-			get<int>(get<DWORD>(weaponBase + 0x4BC) + 0xC0),     // weaponId
-			get<int>(weaponAmmoBase + 0x7D4), // maxAmmo
-			get<int>(weaponAmmoBase + 0x7D0)  // curAmmo
-		);
-		foundedActiveWeapon = true;
-		break;
-	}
+DWORD NavMesh = dGet(Entities[i]->entityAddv + 312);
+Entities[i]->position = v3fGet(NavMesh + 0x150);
+Entities[i]->onEntiyPositionChanged();
+Entities[i]->velocity = v3fGet(NavMesh + 0x1A0);
+Entities[i]->onEntiyVelocityChanged();
+
+Entities[i]->playerWorld = dGet(entityAddv + 0x138);
+
+// Thats UFT16 wchar
+strcpy(Entities[i]->playerName, strGet(dGet(entityAddv + 0x5E8), iGet(entityAddv + 0x5EC) * 2));
+strcpy(Entities[i]->playerFlag, strGet(dGet(entityAddv + 0x5F4), 4));
+strcpy(Entities[i]->playerID, strGet(dGet(entityAddv + 0x604), 22));
+
+Entities[i]->playerStatus = iGet(Entities[i]->playerWorld + 0x364);
+Entities[i]->playerTeamId = iGet(entityAddv + 0x610);
+Entities[i]->itsMe = 0;
+if(entityAddv == uMyObject){
+	myTeamID = Entities[i]->playerTeamId;
+	MeEntity = Entities[i];
+	Entities[i]->itsMe = 1;
+}
+Entities[i]->itsFriend = 0;
+if(myTeamID == Entities[i]->playerTeamId){
+	Entities[i]->itsFriend = 1;
+}
+Entities[i]->playerIsBot = iGet(entityAddv + 0x2B4) == 0 ? true : false;
+DWORD tmpAddv = dGet(entityAddv + 0x308);
+Entities[i]->bodyAddv = tmpAddv + 0x140;
+Entities[i]->boneAddv = dGet(tmpAddv + 0x580) + 0x30;
+
+
+Entities[i]->rotation = fGet(Entities[i]->playerWorld + 0x128); // ROTATE
+
+/* PSOE Ites not ineger, bytes, but we will read as integer.
+1144306736 standing 
+1143847984 crouched  
+1143684144 creep */
+Entities[i]->playerPose = iGet(Entities[i]->playerWorld + 0x130); 
+
+Entities[i]->playerHealth.max = fGet(Entities[i]->entityAddv + 0x77C);
+Entities[i]->playerHealth.cur = fGet(Entities[i]->entityAddv + 0x778);
+Entities[i]->playerEnergy.max = fGet(Entities[i]->entityAddv + 0x1408);
+Entities[i]->playerEnergy.cur = fGet(Entities[i]->entityAddv + 0x140C);
+
+DWORD weaponsCapsule = dGet(Entities[i]->entityAddv + 0x12C);
+Entities[i]->playerIsAttacking = false;
+for(int w = 0; w < 4; w++){
+	DWORD weaponBase = dGet(weaponsCapsule + w * 4);
+	DWORD weaponAmmoBase = dGet(weaponBase + 0x54);
+	Entities[i]->playerWeapons[w].activity = iGet(weaponBase + 0xDC);
+	Entities[i]->playerWeapons[w].state = iGet(weaponBase + 0x4C0);
+	Entities[i]->playerWeapons[w].entityId = iGet(dGet(weaponBase + 0x4BC) + 0xC0);
+	Entities[i]->playerWeapons[w].maxAmmo = iGet(weaponAmmoBase + 0x7D4);
+	Entities[i]->playerWeapons[w].curAmmo = iGet(weaponAmmoBase + 0x7D0);
+}
+// Bones
+Entities[i]->boneActor = vectorBoneRead(Entities[i]->bodyAddv);
+for(int b = 0; b < 15; b++){
+	Entities[i]->playerBones[b] = getPlayerBone(Entities[i]->boneAddv, Entities[i]->boneActor, i, b);
 }
  ```
+ ---  
+## Vehicle Details
+ ```c++
+DWORD NavMesh = dGet(Entities[i]->entityAddv + 312);
+Entities[i]->position = v3fGet(NavMesh + 0x150);
+Entities[i]->onEntiyPositionChanged(); 
 
+Entities[i]->velocity = v3fGet(dGet(Entities[i]->entityAddv + 0x54) + 0x78);
+Entities[i]->onEntiyVelocityChanged();
+DWORD vehicleCommon = dGet(dGet(Entities[i]->entityAddv + 0x54) + 0x4D8);
+Entities[i]->vehicleHealth.max = fGet(vehicleCommon + 0x108);
+Entities[i]->vehicleHealth.cur = fGet(vehicleCommon + 0x10C);
+Entities[i]->vehicleFuel.max = fGet(vehicleCommon + 0x120);
+Entities[i]->vehicleFuel.cur = fGet(vehicleCommon + 0x124);
+```
+ ---  
+## Inventory Details
+ ```c++
+int boxItemCount = iGet(entityAddv + 0x440);
+Entities[i]->inventoryItemCount = 0;
+if(boxItemCount < 60){
+	DWORD itemEntry = iGet(entityAddv + 0x43C);
+	if(itemEntry > 50000){
+		for(int h = 0; h < boxItemCount; h++){
+			DWORD itemAddv = itemEntry + h * 48;
+			Entities[i]->inventoryItems[Entities[i]->inventoryItemCount].entityId = iGet(itemAddv + 0x4);
+			if(Entities[i]->inventoryItems[Entities[i]->inventoryItemCount].entityId > 0){
+				Entities[i]->inventoryItems[Entities[i]->inventoryItemCount].count = iGet(itemAddv + 0x18);
+				Entities[i]->inventoryItemCount++;
+			}
+		}
+	}
+} 
+```
 ---  
 
 ## Item Details
