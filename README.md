@@ -63,8 +63,11 @@ As **xiderowg**'s says on https://www.unknowncheats.me/forum/pubg-mobile/379241-
 `Gameloop is based on AOW/QEMU Engine, while LDPlayer is using VirtualBox, these offsets and pattern may not be applicable to LDPlayer.`
   
 ---  
-## Pubg Mobile GameLoop ReClass
-![](https://raw.githubusercontent.com/atiksoftware/pubg_mobile_memory_hacking_examples/master/screens/reclass_pubg_mobile.png)
+## Pubg Mobile Entity Offsets
+
+[![Pubg Mobile Player Entity Offsets](https://raw.githubusercontent.com/atiksoftware/pubg_mobile_memory_hacking_examples/master/Offsets/images/ReClassThumbnailPlayer.png)](Offsets/Player.md)
+[![Pubg Mobile Vehicle Entity Offsets](https://raw.githubusercontent.com/atiksoftware/pubg_mobile_memory_hacking_examples/master/Offsets/images/ReClassThumbnailVehicle.png)](Offsets/Vehicle.md)
+[![Pubg Mobile Invetory Entity Offsets](https://raw.githubusercontent.com/atiksoftware/pubg_mobile_memory_hacking_examples/master/Offsets/images/ReClassThumbnailInventory.png)](Offsets/Inventory.md)
 ---  
 ## Player Details
 ![](https://raw.githubusercontent.com/atiksoftware/pubg_mobile_memory_hacking_examples/master/screens/example_player_reclass.jpg)
