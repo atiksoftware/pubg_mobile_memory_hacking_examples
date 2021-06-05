@@ -5,8 +5,11 @@
 [![GitHub contributors](https://img.shields.io/github/contributors/atiksoftware/pubg_mobile_memory_hacking_examples?color=brightgreen)]()
 [![GitHub issues](https://img.shields.io/github/issues/atiksoftware/pubg_mobile_memory_hacking_examples?color=blue)]()
 
+[<img src="https://nullify.uno/assets/images/discord-button.png" width="330" >](https://discord.gg/qUGDFVgT)
 
-[https://discord.gg/r29z6XW](https://discord.gg/r29z6XW)
+`SORRY folks. My previous discord account was closed due to hacking.`
+`This is my new discord account: Those who want to visit can join from this link.`
+
 
 Pubg Mobile Emulator Gameloop Memory Hacking C++ code examples. Ex: Name, Coord, Bones, Weapons, Items, Box, Drop etc.  
 
